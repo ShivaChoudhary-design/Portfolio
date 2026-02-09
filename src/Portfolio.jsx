@@ -62,7 +62,7 @@ export default function App() {
               apps
             </h2>
             <p className="mt-6 text-lg text-slate-600 dark:text-slate-400">
-              1.5+ years of experience with React & Next.js, focused on Core Web
+              Around 2 years of experience with React & Next.js, focused on Core Web
               Vitals, CMS-driven architectures, and SEO-optimized platforms.
             </p>
             <div className="mt-8 flex gap-4">
@@ -119,9 +119,7 @@ export default function App() {
                   1.1M/month and clicks to 7K.
                 </li>
                 <li>
-                  Built and shipped a reusable Next.js micro-frontend SDK
-                  (Team-BHP Lead Widget) with dynamic theming support, driving a
-                  30–35% increase in lead generation across partner sites.
+                 Designed and implemented a config-driven, domain-aware theming system across four domains using HTML data-* attributes, CSS variables, Tailwind configuration, and domain-specific assets, improving maintainability and deployment efficiency.
                 </li>
                 <li>
                   Collaborated closely with product managers, designers, and
