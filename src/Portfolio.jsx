@@ -29,6 +29,53 @@ export default function Portfolio() {
     "Web Vitals & SEO",
   ];
 
+  const projects = [
+    {
+      id: 1,
+      heading: "Cars24 New Cars",
+      description:
+        "New Cars is automotive discovery platforms designed to help users browse, compare, and evaluate cars using structured listings and search-based navigation.",
+      bulletPoints: [
+        "Developed a modular vehicle discovery experience supporting complex filters, sorting, and SEO-friendly listing pages.",
+        "Optimized frontend performance using debounced search, reusable UI architecture, and seamless API integrations.",
+      ],
+      redirectionUrl: "https://cars24.com/new-cars/",
+    },
+    {
+      id: 2,
+      heading: "Bikes24",
+      description:
+        "Bikes24 is automotive discovery platforms designed to help users browse, compare, and evaluate bikes using structured listings and search-based navigation.",
+      bulletPoints: [
+        "Built a high-performance car listing platform with server-side filter parsing and client-side dynamic filtering for multiple page use-cases.",
+        "Implemented scalable infinite scroll & “View More” patterns with optimized API calls and reusable React components.",
+      ],
+      redirectionUrl: "https://bikes24.com/",
+    },
+    {
+      id: 3,
+      heading: "Movie Browsing App (GPT)",
+      description:
+        "Movie discovery app with TMDB API, Firebase auth, multilingual support, and GPT-powered intelligent search.",
+      bulletPoints: [
+        "TMDB API, Firebase auth, multilingual UI",
+        "OpenAI GPT-based movie recommendations",
+      ],
+      redirectionUrl: "https://my-flix-gpt.netlify.app/",
+    },
+    {
+      id: 4,
+      heading: "Food Ordering App",
+      description:
+        "React-based food ordering platform with Redux Toolkit cart management, routing, and Tailwind-powered responsive UI.",
+      bulletPoints: [
+        "Redux Toolkit, client-side routing, responsive Tailwind UI",
+        "Hooks and memoization for performance",
+      ],
+      redirectionUrl: "https://foddiiee.netlify.app/",
+    },
+  ];
+
   return (
     <div className="w-full min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300">
       {/* NAVBAR */}
@@ -284,77 +331,47 @@ export default function Portfolio() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <article className="group p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-200 dark:hover:border-indigo-800/50 hover:shadow-xl hover:shadow-indigo-500/5 dark:hover:shadow-indigo-900/10 transition-all duration-300 flex flex-col">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                Food Ordering App
-              </h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-1">
-                React-based food ordering platform with Redux Toolkit cart
-                management, routing, and Tailwind-powered responsive UI.
-              </p>
-              <ul className="space-y-2 text-slate-600 dark:text-slate-400 text-sm mb-6">
-                <li>
-                  • Redux Toolkit, client-side routing, responsive Tailwind UI
-                </li>
-                <li>• Hooks and memoization for performance</li>
-              </ul>
-              <a
-                href="https://foddiiee.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 w-fit px-4 py-2.5 rounded-xl font-medium bg-indigo-600 text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 transition-colors"
-              >
-                Live Demo
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+            {projects.map((project) => {
+              return (
+                <article
+                  key={project.id}
+                  className="group p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-200 dark:hover:border-indigo-800/50 hover:shadow-xl hover:shadow-indigo-500/5 dark:hover:shadow-indigo-900/10 transition-all duration-300 flex flex-col"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </article>
-
-            <article className="group p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-200 dark:hover:border-indigo-800/50 hover:shadow-xl hover:shadow-indigo-500/5 dark:hover:shadow-indigo-900/10 transition-all duration-300 flex flex-col">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                Movie Browsing App (GPT)
-              </h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-1">
-                Movie discovery app with TMDB API, Firebase auth, multilingual
-                support, and GPT-powered intelligent search.
-              </p>
-              <ul className="space-y-2 text-slate-600 dark:text-slate-400 text-sm mb-6">
-                <li>• TMDB API, Firebase auth, multilingual UI</li>
-                <li>• OpenAI GPT-based movie recommendations</li>
-              </ul>
-              <a
-                href="https://my-flix-gpt.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 w-fit px-4 py-2.5 rounded-xl font-medium bg-indigo-600 text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 transition-colors"
-              >
-                Live Demo
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </article>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                    {project.heading}
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-1">
+                    {project.description}
+                  </p>
+                  <ul className="space-y-2 text-slate-600 dark:text-slate-400 text-sm mb-6">
+                    {project.bulletPoints.map((bullet) => {
+                      return <li key={bullet}>{bullet}</li>;
+                    })}
+                  </ul>
+                  <a
+                    href={project.redirectionUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 w-fit px-4 py-2.5 rounded-xl font-medium bg-indigo-600 text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 transition-colors"
+                  >
+                    Live Demo
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
